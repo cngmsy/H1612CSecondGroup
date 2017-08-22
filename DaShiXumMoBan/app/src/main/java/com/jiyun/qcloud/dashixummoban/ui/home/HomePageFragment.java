@@ -1,5 +1,6 @@
 package com.jiyun.qcloud.dashixummoban.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
@@ -18,6 +20,7 @@ import com.jiyun.qcloud.dashixummoban.adapter.AdapterRecview;
 import com.jiyun.qcloud.dashixummoban.base.BaseFragment;
 import com.jiyun.qcloud.dashixummoban.entity.PandaHome;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
+import com.jiyun.qcloud.dashixummoban.ui.home.activity.ShangPingActivity;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -48,7 +51,7 @@ import static com.jiyun.qcloud.dashixummoban.R.id.shouyetu44;
 /**
  * Created by chj on 2017/8/20.
  */
-
+//应用首页  金斌
 public class HomePageFragment extends BaseFragment implements XRecyclerView.LoadingListener, HomeContract.View {
 //    @BindView(R.id.shouyetu11)
 //    ImageView shouyetu11;
@@ -154,6 +157,20 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         xrecycler.addHeaderView(inflate);
         xrecycler.setAdapter(adapterRecview);
         presenter.start1(adapterRecview);
+
+        setListener();
+    }
+
+    //点击条目跳转到商品页面
+    private void setListener() {
+        adapterRecview.onLintern(new AdapterRecview.Tiaozhuan() {
+            @Override
+            public void tiao(View view, int i) {
+//                Toast.makeText(getActivity(), "xxxxx", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), ShangPingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
