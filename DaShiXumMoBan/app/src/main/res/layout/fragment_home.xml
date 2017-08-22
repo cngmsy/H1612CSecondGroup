@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<com.jcodecraeer.xrecyclerview.XRecyclerView
+    android:id="@+id/xrecycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+    <LinearLayout
+        android:id="@+id/jianbian"
+        android:background="#90c1ef"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/dingwei"
+            android:background="@drawable/home_address_drop_down"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <LinearLayout
+            android:background="@drawable/item_kuang"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/sousuo"
+                android:src="@drawable/home_search"
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/shangpindemingceng"
+                android:hint="输入商家、商品名称"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
