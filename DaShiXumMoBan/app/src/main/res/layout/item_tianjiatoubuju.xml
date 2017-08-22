@@ -17,6 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu1"
                 android:layout_width="match_parent"
@@ -33,6 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu2"
                 android:layout_width="match_parent"
@@ -49,6 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu3"
                 android:layout_width="match_parent"
@@ -65,6 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu4"
                 android:layout_width="match_parent"
@@ -87,6 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu11"
                 android:layout_width="match_parent"
@@ -103,6 +108,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu22"
                 android:layout_width="match_parent"
@@ -119,6 +125,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu33"
                 android:layout_width="match_parent"
@@ -135,6 +142,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageView
+                android:layout_margin="@dimen/x5"
                 android:gravity="center"
                 android:id="@+id/shouyetu44"
                 android:layout_width="match_parent"

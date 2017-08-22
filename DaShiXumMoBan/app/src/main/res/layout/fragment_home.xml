@@ -43,4 +43,11 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>
+    <ListView
+        android:layout_marginRight="@dimen/x10"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/jianbian"
+        android:id="@+id/lishijilu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
 </RelativeLayout>

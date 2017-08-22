@@ -20,8 +20,13 @@ android {
     }
     greendao{
         schemaVersion 1
-        daoPackage 'com.example.lenovo.elemamode.dom'
+        daoPackage 'com.jiyun.qcloud.dashixummoban.dom'
         targetGenDir 'src/main/java'
+    }
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
     }
 }
 
@@ -33,17 +38,16 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     testCompile 'junit:junit:4.12'
-
     compile 'com.github.orhanobut:logger:1.12+'
     compile 'com.zhy:autolayout:1.4.3'
     compile 'com.android.support:multidex:1.0.1'
-//上拉刷新，下拉加载的框架
+    //上拉刷新，下拉加载的框架
     compile 'com.chanven.lib:cptr:1.1.0'
-//轮播图
+    //轮播图
     compile 'com.youth.banner:banner:1.4.9'
-//
+    //
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.github.bumptech.glide:glide:3.8.0'
@@ -52,11 +56,14 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'org.zackratos:ultimatebar:1.0.3'
-//Retrofit2
+    //Retrofit2
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     compile 'com.squareup.okhttp3:logging-interceptor:3.3.0'
-//Dagger2 的依赖
+    //Dagger2 的依赖
     compile 'com.google.dagger:dagger:2.5'
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
+    compile files('libs/AMap_Search_V5.1.0_20170517.jar')
+    compile files('libs/Android_Map3D_SDK_V5.1.0_20170518.jar')
 
 }
