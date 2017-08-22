@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_clear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#4c88e8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30">
+
+        <ImageView
+            android:id="@+id/image_clear_back"
+            android:layout_marginLeft="@dimen/x10"
+            android:src="@drawable/go_back"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/y30" />
+        <TextView
+            android:textColor="#fff"
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center_vertical"
+            android:text="结算中心"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_clear_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/x30"
+            android:src="@drawable/bk_icon_select_location"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/y30" />
+        <TextView
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center_vertical"
+            android:text="请设置收获地址"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"/>
+    </LinearLayout>
+
+    <TextView
+        android:background="#d4d4d4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y120"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="支付方式"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="红包"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="商家代金券"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="配送费"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y120"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="在线支付"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="无红包可用"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="没有商家代金券可用"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+            <TextView
+                android:gravity="center"
+                android:paddingLeft="@dimen/x30"
+                android:text="￥：0"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:background="#d4d4d4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/recycle_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y95">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25">
+
+        <TextView
+            android:textColor="#fff"
+            android:background="#7e7b7b"
+            android:paddingLeft="@dimen/x10"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:text="待支付￥："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_clear_money"
+            android:textColor="#fff"
+            android:background="#7e7b7b"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:text="0.00"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:textColor="#fff"
+            android:background="#8def88"
+            android:id="@+id/tv_clear_submit"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:text="提交订单"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
