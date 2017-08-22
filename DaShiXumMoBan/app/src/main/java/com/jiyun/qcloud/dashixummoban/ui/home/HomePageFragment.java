@@ -1,5 +1,6 @@
 package com.jiyun.qcloud.dashixummoban.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -28,7 +30,11 @@ import com.jiyun.qcloud.dashixummoban.entity.DanliGreen;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
 import com.jiyun.qcloud.dashixummoban.entity.PandaHome;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
+<<<<<<< HEAD
 import com.jiyun.qcloud.dashixummoban.entity.Sousuolei;
+=======
+import com.jiyun.qcloud.dashixummoban.ui.home.activity.ShangPingActivity;
+>>>>>>> 4b310ca824adb7301b8d739ec97174bf6c072d5e
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -45,7 +51,7 @@ import de.greenrobot.event.Subscribe;
 /**
  * Created by chj on 2017/8/20.
  */
-
+//应用首页  金斌
 public class HomePageFragment extends BaseFragment implements XRecyclerView.LoadingListener, HomeContract.View {
     @BindView(R.id.dingwei)
     Button dingwei;
@@ -157,6 +163,7 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         xrecycler.addHeaderView(inflate);
         xrecycler.setAdapter(adapterRecview);
         presenter.start1(adapterRecview);
+<<<<<<< HEAD
         mLocationClient = new AMapLocationClient(getActivity());
 //设置定位回调监听
         mLocationClient.setLocationListener(mLocationListener);
@@ -169,6 +176,22 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         mLocationClient.startLocation();
         lishijilu.setVisibility(View.GONE);
         sousuo11();
+=======
+
+        setListener();
+    }
+
+    //点击条目跳转到商品页面
+    private void setListener() {
+        adapterRecview.onLintern(new AdapterRecview.Tiaozhuan() {
+            @Override
+            public void tiao(View view, int i) {
+//                Toast.makeText(getActivity(), "xxxxx", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), ShangPingActivity.class);
+                startActivity(intent);
+            }
+        });
+>>>>>>> 4b310ca824adb7301b8d739ec97174bf6c072d5e
     }
 
     @Override

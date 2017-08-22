@@ -58,7 +58,7 @@ public class AdapterRecview extends RecyclerView.Adapter {
         }
 
         @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
             int itemViewType = getItemViewType(position);
             switch (itemViewType){
                 case 0:
@@ -67,7 +67,7 @@ public class AdapterRecview extends RecyclerView.Adapter {
                     holder1.itemView1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-//                            tiaozhuan.tiao();
+                            tiaozhuan.tiao(view,position);
                         }
                     });
                     break;
@@ -121,10 +121,12 @@ public class AdapterRecview extends RecyclerView.Adapter {
             }
         }
         public interface Tiaozhuan{
-            void tiao();
+            void tiao(View view,int i);
         }
         public void onLintern(Tiaozhuan tiaozhuan){
             this.tiaozhuan=tiaozhuan;
         }
+
     }
+
 

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x6">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="月销售53份"
+        android:textColor="#c7c7c7"
+        android:textSize="10sp"
+        android:layout_below="@+id/imageItem"
+        android:layout_alignLeft="@+id/textItem"
+        android:layout_alignStart="@+id/textItem" />
+
+    <ImageView
+        android:id="@+id/imageItem"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/x50"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x6"
+        android:text="xxx"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageItem"
+        android:layout_toEndOf="@+id/imageItem" />
+
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#c7c7c7"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="xxx"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <TextView
+        android:textColor="#ff0d00"
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        app:srcCompat="@mipmap/food_button_add"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView13"
+        android:layout_toLeftOf="@+id/imageView13"
+        android:layout_toStartOf="@+id/imageView13"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView25"
+        android:layout_toLeftOf="@+id/textView25"
+        android:layout_toStartOf="@+id/textView25"
+        app:srcCompat="@mipmap/food_button_minus" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView11"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--app:srcCompat="@android:drawable/ic_input_add"-->
+        <!--android:layout_alignBottom="@+id/textView8"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView20"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="0"-->
+        <!--android:layout_alignTop="@+id/textView8"-->
+        <!--android:layout_toLeftOf="@+id/imageView11"-->
+        <!--android:layout_marginRight="12dp"-->
+        <!--android:layout_marginEnd="12dp" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView13"-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:srcCompat="@android:drawable/button_onoff_indicator_on"-->
+        <!--android:layout_marginRight="13dp"-->
+        <!--android:layout_marginEnd="13dp"-->
+        <!--android:layout_alignTop="@+id/textView20"-->
+        <!--android:layout_toLeftOf="@+id/textView20"-->
+        <!--android:layout_toStartOf="@+id/textView20" />-->
+
+
+</RelativeLayout>
