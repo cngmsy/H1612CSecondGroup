@@ -2,6 +2,7 @@ package com.jiyun.qcloud.dashixummoban.ui.home;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -13,6 +14,7 @@ import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
 import com.jiyun.qcloud.dashixummoban.modle.dataModel.IPandaHomeModel;
 import com.jiyun.qcloud.dashixummoban.modle.dataModel.PandaHomeModelImpl;
 import com.jiyun.qcloud.dashixummoban.modle.net.callback.NetWorkCallBack;
+import com.jiyun.qcloud.dashixummoban.ui.Dingwei;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
@@ -97,6 +99,13 @@ public class HomePresenter implements HomeContract.Presenter {
                     .setImageLoader(new GlideImage())//加载图片
                     .setIndicatorGravity(BannerConfig.CENTER)//设置指示器位置
                     .start();
+    }
+
+    @Override
+    public void dingwei(Context context) {
+        Intent intent = new Intent(context, Dingwei.class);
+        context.startActivity(intent);
+
     }
     public class GlideImage extends ImageLoader {
         @Override

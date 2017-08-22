@@ -1,5 +1,7 @@
 package com.jiyun.qcloud.dashixummoban.base;
 
+import android.content.Context;
+
 import com.jiyun.qcloud.dashixummoban.adapter.AdapterRecview;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
 import com.youth.banner.Banner;
@@ -14,4 +16,5 @@ public interface IBasePresenter {
     void start();
     void start1(AdapterRecview adapterRecview);
     void setBanner(Banner banner,List<Shouye2.HeadBean.PromotionListBean> promotionList);
+    void dingwei(Context context);
 }
