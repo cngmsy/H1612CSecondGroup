@@ -1,5 +1,6 @@
 package com.jiyun.qcloud.dashixummoban.ui.home.activity.fragment.xiangqing;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -84,6 +85,11 @@ public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
 
     @Override
     public void setBanner(Banner banner, List<Shouye2.HeadBean.PromotionListBean> promotionList) {
+
+    }
+
+    @Override
+    public void dingwei(Context context) {
 
     }
 

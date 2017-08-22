@@ -30,11 +30,11 @@ import com.jiyun.qcloud.dashixummoban.entity.DanliGreen;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
 import com.jiyun.qcloud.dashixummoban.entity.PandaHome;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
-<<<<<<< HEAD
+
 import com.jiyun.qcloud.dashixummoban.entity.Sousuolei;
-=======
+
 import com.jiyun.qcloud.dashixummoban.ui.home.activity.ShangPingActivity;
->>>>>>> 4b310ca824adb7301b8d739ec97174bf6c072d5e
+
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -46,6 +46,9 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
+import retrofit2.http.HEAD;
+
+import static com.jiyun.qcloud.dashixummoban.manager.ActivityCollector.getActivity;
 
 
 /**
@@ -163,7 +166,7 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         xrecycler.addHeaderView(inflate);
         xrecycler.setAdapter(adapterRecview);
         presenter.start1(adapterRecview);
-<<<<<<< HEAD
+
         mLocationClient = new AMapLocationClient(getActivity());
 //设置定位回调监听
         mLocationClient.setLocationListener(mLocationListener);
@@ -176,7 +179,7 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         mLocationClient.startLocation();
         lishijilu.setVisibility(View.GONE);
         sousuo11();
-=======
+
 
         setListener();
     }
@@ -191,7 +194,6 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
                 startActivity(intent);
             }
         });
->>>>>>> 4b310ca824adb7301b8d739ec97174bf6c072d5e
     }
 
     @Override
