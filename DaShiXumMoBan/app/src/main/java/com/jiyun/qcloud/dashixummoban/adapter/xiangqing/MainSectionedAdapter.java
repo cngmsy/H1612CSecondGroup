@@ -91,15 +91,14 @@ public class MainSectionedAdapter extends SectionedBaseAdapter{
 //                mButtonClick.buttonClick(position, integer2, orderView);
 //            }
 //        });
-<<<<<<< HEAD
-        final ImageView add = layout.findViewById(R.id.imageView13);
-        final ImageView delete =  layout.findViewById(R.id.imageView17);
-        final TextView number =  layout.findViewById(R.id.textView25);
-=======
+
+//        final ImageView add = layout.findViewById(R.id.imageView13);
+//        final ImageView delete =  layout.findViewById(R.id.imageView17);
+//        final TextView number =  layout.findViewById(R.id.textView25);
         final ImageView add = (ImageView) layout.findViewById(R.id.imageView13);
         final ImageView delete = (ImageView) layout.findViewById(R.id.imageView17);
         final TextView number = (TextView) layout.findViewById(R.id.textView25);
->>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
+
         int oldPrice = listdata.get(section).get(position).getOldPrice();
         if (oldPrice<=0){
             delete.setVisibility(View.INVISIBLE);

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.jiyun.qcloud.dashixummoban">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        tools:replace="Android:icon,android:theme"
         android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,13 +24,14 @@
         <activity android:name=".main.MainActivity" />
 
         <activity android:name=".ui.Dingwei"></activity>
-<<<<<<< HEAD
+
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="92d7f351bb12e130c0e08416feac7209"></meta-data>
 
-        <activity android:name=".ui.home.activity.ShangPingActivity"></activity>
+
+
         <activity android:name=".ui.wenghua.dl1.DL1Activity" />
         <activity android:name=".ui.wenghua.dl2.DL2Activity"></activity>
         <activity
@@ -57,10 +61,7 @@
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5977e86d65b6d61afe0002ec" />
-=======
 
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="3be11cba08bd773f6c73ab20b338f5cd"></meta-data>
->>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
 
         <activity android:name=".ui.home.activity.ShangPingActivity"></activity>
         <activity android:name=".activity.ShoppingcarActivity" />
