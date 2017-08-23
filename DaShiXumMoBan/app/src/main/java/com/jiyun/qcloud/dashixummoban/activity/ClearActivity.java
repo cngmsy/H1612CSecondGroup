@@ -29,7 +29,6 @@ import de.greenrobot.event.Subscribe;
 
 public class ClearActivity extends BaseActivity {
 
-
     @BindView(R.id.image_clear_back)
     ImageView imageClearBack;
     @BindView(R.id.recycle_clear)
@@ -101,8 +100,8 @@ public class ClearActivity extends BaseActivity {
 
         View inflate = LayoutInflater.from(this).inflate(R.layout.item_clear_head, null);
         inflate.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT));
-        linear_clear_address = inflate.findViewById(R.id.linear_clear_address);
-        tv_clear_address = inflate.findViewById(R.id.tv_clear_address);
+        linear_clear_address = (LinearLayout) inflate.findViewById(R.id.linear_clear_address);
+        tv_clear_address = (TextView) inflate.findViewById(R.id.tv_clear_address);
         recycleClear.addHeaderView(inflate);
 
         EventBus.getDefault().register(this);

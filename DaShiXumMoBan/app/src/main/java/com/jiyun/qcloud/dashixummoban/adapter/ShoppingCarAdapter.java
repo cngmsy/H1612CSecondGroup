@@ -59,10 +59,10 @@ public class ShoppingCarAdapter extends RecyclerView.Adapter{
         public MyHolder(View itemView) {
             super(itemView);
 
-            image_shoppingcar_head = itemView.findViewById(R.id.image_shoppingcar_head);
-            tv_shoppingcar_form = itemView.findViewById(R.id.tv_shoppingcar_form);
-            tv_shoppingcar_newprice = itemView.findViewById(R.id.tv_shoppingcar_newprice);
-            tv_shoppingcar_num = itemView.findViewById(R.id.tv_shoppingcar_num);
+            image_shoppingcar_head = (ImageView) itemView.findViewById(R.id.image_shoppingcar_head);
+            tv_shoppingcar_form = (TextView) itemView.findViewById(R.id.tv_shoppingcar_form);
+            tv_shoppingcar_newprice = (TextView) itemView.findViewById(R.id.tv_shoppingcar_newprice);
+            tv_shoppingcar_num = (TextView) itemView.findViewById(R.id.tv_shoppingcar_num);
         }
     }
 }

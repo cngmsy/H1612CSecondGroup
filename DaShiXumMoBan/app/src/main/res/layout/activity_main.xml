@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <FrameLayout
         android:id="@+id/container"
@@ -12,7 +12,7 @@
         android:layout_weight="1">
     </FrameLayout>
 
-    <RadioGroupo
+    <RadioGroup
         android:id="@+id/homeBottomGroup"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x70"
@@ -67,6 +67,6 @@
             android:text="更多"
             android:textSize="12sp" />
 
-    </RadioGroupo>
+    </RadioGroup>
 
 </LinearLayout>

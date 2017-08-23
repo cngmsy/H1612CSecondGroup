@@ -40,12 +40,8 @@ public class Dingwei extends BaseActivity {
                     String address = aMapLocation.getAddress();
                     difng.setText(address);
                     EventBus.getDefault().post(new FirstEvent(address));
-<<<<<<< HEAD
                     EventBus.getDefault().post(new SecondEvent(address));
-//可在其中解析amapLocation获取相应内容。
-=======
-//                    EventBus.getDefault().post(new SecondEvent(address));
->>>>>>> b14f488686ce13650d4631ef3ad8e5476025ff3d
+
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
                     Log.e("AmapError", "location Error, ErrCode:"
