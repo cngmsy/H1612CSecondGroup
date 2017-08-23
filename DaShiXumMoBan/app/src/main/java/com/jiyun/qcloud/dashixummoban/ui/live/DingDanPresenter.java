@@ -1,10 +1,14 @@
-package com.jiyun.qcloud.dashixummoban.ui.home.activity.fragment.xiangqing;
+package com.jiyun.qcloud.dashixummoban.ui.live;
 
 import android.content.Context;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.jiyun.qcloud.dashixummoban.adapter.AdapterRecview;
+import com.jiyun.qcloud.dashixummoban.entity.DingDanBean2;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
 import com.jiyun.qcloud.dashixummoban.modle.net.callback.NetWorkCallBack;
@@ -12,18 +16,20 @@ import com.jiyun.qcloud.dashixummoban.modle.shoye.IShoYeDataModel;
 import com.jiyun.qcloud.dashixummoban.modle.shoye.ShoYeDataImpl;
 import com.youth.banner.Banner;
 
+import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * Created by Administrator on 2017/8/22.
  */
-//商品信息二级联动
-public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
-    XiangQing.View view;
-    IShoYeDataModel getdata;
 
-    public XiangQingPresenter(XiangQing.View view) {
+//订单的Presenter层
+public class DingDanPresenter implements DingDan.Presenter,DingDan.View{
+    DingDan.View view;
+    IShoYeDataModel getdata;
+    List<DingDanBean2.GoodsInfosBean> listdata = new ArrayList<>();
+
+    public DingDanPresenter(DingDan.View view) {
         this.view = view;
         view.setPresenter(this);
         getdata=new ShoYeDataImpl();
@@ -45,7 +51,7 @@ public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
     }
 
     @Override
-    public void setPresenter(XiangQing.Presenter presenter) {
+    public void setPresenter(DingDan.Presenter presenter) {
 
     }
 
@@ -53,18 +59,22 @@ public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
     public void start() {
         //显示进度条
         view.showProgress();
-        //在该方法的回调参数中完成数据bean对象的返回
-        getdata.data2(new NetWorkCallBack<Shouye>() {
+        getdata.data3(new NetWorkCallBack<Shouye>() {
             @Override
-            public void onSuccess(Shouye shuju) {
+            public void onSuccess(Shouye shouye) {
+                String data = shouye.getData();
+                Log.e("data", data);
+                //解析
                 Gson gson = new Gson();
-                String data = shuju.getData();
-                Log.e("data",data);
-                view.showHomeListData(shuju);
-
-
+                JsonParser jsonParser = new JsonParser();
+                JsonArray asJsonArray = jsonParser.parse(shouye.getData()).getAsJsonArray();
+                for (JsonElement obj : asJsonArray) {
+                    DingDanBean2 dingDanBean2 = gson.fromJson(obj, DingDanBean2.class);
+                    listdata.addAll(dingDanBean2.getGoodsInfos());
+                }
+                view.showHomeListData(listdata);
+//                view.showHomeListData(shouye);
             }
-
 
             @Override
             public void onError(int errorCode, String errorMsg) {
@@ -94,7 +104,7 @@ public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
     }
 
     @Override
-    public void showHomeListData(Shouye shuju) {
+    public void showHomeListData(List<DingDanBean2.GoodsInfosBean> listdata) {
 
     }
 

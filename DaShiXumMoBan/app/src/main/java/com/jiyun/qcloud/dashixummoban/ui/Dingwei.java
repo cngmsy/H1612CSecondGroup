@@ -37,20 +37,10 @@ public class Dingwei extends BaseActivity {
         public void onLocationChanged(AMapLocation aMapLocation) {
             if (aMapLocation != null) {
                 if (aMapLocation.getErrorCode() == 0) {
-                    double latitude = aMapLocation.getLatitude();//获取纬度
-                    double longitude = aMapLocation.getLongitude();
-                    String country = aMapLocation.getCountry();//国家信息
-                    String province = aMapLocation.getProvince();//省信息
-                    String city = aMapLocation.getCity();//城市信息
-                    String district = aMapLocation.getDistrict();
-                    StringBuffer aa = new StringBuffer();
-                    aa.append(latitude + "").append(longitude + "").append(country).append(province)
-                            .append(city).append(district);
-                    String s = aa.toString();
-                    difng.setText(s);
-                    EventBus.getDefault().post(new FirstEvent(s));
-
-//可在其中解析amapLocation获取相应内容。
+                    String address = aMapLocation.getAddress();
+                    difng.setText(address);
+                    EventBus.getDefault().post(new FirstEvent(address));
+//                    EventBus.getDefault().post(new SecondEvent(address));
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
                     Log.e("AmapError", "location Error, ErrCode:"

@@ -12,17 +12,17 @@
         android:background="#90c1ef"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="@dimen/x60">
         <TextView
             android:id="@+id/name"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/x100"
             android:layout_height="match_parent" />
         <Button
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/x15"
             android:id="@+id/dingwei"
             android:background="@drawable/home_address_drop_down"
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x30" />
         <LinearLayout
             android:background="@drawable/item_kuang"
             android:orientation="horizontal"
@@ -31,7 +31,7 @@
             <ImageView
                 android:id="@+id/sousuo"
                 android:src="@drawable/home_search"
-                android:layout_width="30dp"
+                android:layout_width="@dimen/x30"
                 android:layout_height="match_parent" />
             <EditText
                 android:id="@+id/shangpindemingceng"
