@@ -9,5 +9,6 @@ import com.jiyun.qcloud.dashixummoban.modle.net.HttpFactory;
  */
 
 public interface BaseModel {
+    //用接口去初始化网络请求
     public static IBaseHttp iHttp = HttpFactory.createOK();
 }
