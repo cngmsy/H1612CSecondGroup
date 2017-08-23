@@ -20,12 +20,11 @@
         </activity>
 
         <activity android:name=".ui.Dingwei"></activity>
-<<<<<<< HEAD
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="3be11cba08bd773f6c73ab20b338f5cd">
-=======
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="58c03a8d2432ddb9985a2553b50c7694">
->>>>>>> b14f488686ce13650d4631ef3ad8e5476025ff3d
-        </meta-data>
+
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="3be11cba08bd773f6c73ab20b338f5cd"></meta-data>
+
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="58c03a8d2432ddb9985a2553b50c7694"></meta-data>
+
         <service android:name="com.amap.api.location.APSService"></service>
 
 
