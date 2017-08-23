@@ -8,7 +8,7 @@ import com.jiyun.qcloud.dashixummoban.entity.Shouye;
 /**
  * Created by Administrator on 2017/8/22.
  */
-//
+//商品信息二级联动
 public class XiangQing {
     public interface View extends IBaseView<Presenter> {
         void showHomeListData(Shouye shuju);

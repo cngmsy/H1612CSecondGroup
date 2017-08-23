@@ -27,6 +27,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.jiyun.qcloud.dashixummoban.R;
+import com.jiyun.qcloud.dashixummoban.activity.ShoppingcarActivity;
 import com.jiyun.qcloud.dashixummoban.adapter.xiangqing.LeftListAdapter;
 import com.jiyun.qcloud.dashixummoban.adapter.xiangqing.MainSectionedAdapter;
 import com.jiyun.qcloud.dashixummoban.base.BaseFragment;
@@ -97,28 +98,31 @@ public class XiangQingFragment extends BaseFragment implements XiangQing.View {
     }
 
     private void setShopListener() {
-        arrlist.clear();
-        for (int j = 0; j <listdata.size() ; j++) {
-            List<XiangQingBean2.ListBean> listBeen = listdata.get(j);
-            for (int k = 0; k <listBeen.size() ; k++) {
 
-                int oldPrice = listBeen.get(k).getOldPrice();
+        shopImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                if (oldPrice!=0&&oldPrice>0){
-                    arrlist.add(listBeen.get(k));
+                arrlist.clear();
+                for (int j = 0; j <listdata.size() ; j++) {
+                    List<XiangQingBean2.ListBean> listBeen = listdata.get(j);
+                    for (int k = 0; k <listBeen.size() ; k++) {
+                        int oldPrice = listBeen.get(k).getOldPrice();
+                        if (oldPrice!=0&&oldPrice>0){
+                            arrlist.add(listBeen.get(k));
+                        }
+                    }
+                }
+                //跳转判断
+                if (i>0) {
+                    Intent intent = new Intent(activity, ShoppingcarActivity.class);
+                    intent.putExtra("arrlist",arrlist);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(activity, "你还没有购买任何商品", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
-
-        //跳转判断
-//        if (i>0) {
-//            Intent intent = new Intent(activity, ShoppingcarActivity.class);
-//            intent.putExtra("arrlist",arrlist);
-//            startActivity(intent);
-//        }else{
-//            Toast.makeText(activity, "你还没有购买任何商品", Toast.LENGTH_SHORT).show();
-//        }
-
+        });
     }
 
     @Override

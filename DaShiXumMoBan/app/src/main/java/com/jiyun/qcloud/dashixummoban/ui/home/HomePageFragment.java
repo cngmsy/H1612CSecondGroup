@@ -3,6 +3,7 @@ package com.jiyun.qcloud.dashixummoban.ui.home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -30,11 +30,8 @@ import com.jiyun.qcloud.dashixummoban.entity.DanliGreen;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
 import com.jiyun.qcloud.dashixummoban.entity.PandaHome;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
-
 import com.jiyun.qcloud.dashixummoban.entity.Sousuolei;
-
 import com.jiyun.qcloud.dashixummoban.ui.home.activity.ShangPingActivity;
-
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -46,9 +43,6 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
-import retrofit2.http.HEAD;
-
-import static com.jiyun.qcloud.dashixummoban.manager.ActivityCollector.getActivity;
 
 
 /**
@@ -102,18 +96,8 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         public void onLocationChanged(AMapLocation aMapLocation) {
             if (aMapLocation != null) {
                 if (aMapLocation.getErrorCode() == 0) {
-                    double latitude = aMapLocation.getLatitude();//获取纬度
-                    double longitude = aMapLocation.getLongitude();
-                    String country = aMapLocation.getCountry();//国家信息
-                    String province = aMapLocation.getProvince();//省信息
-                    String city = aMapLocation.getCity();//城市信息
-                    String district = aMapLocation.getDistrict();
-                    StringBuffer aa = new StringBuffer();
-                    aa.append(latitude + "").append(longitude + "").append(country).append(province)
-                            .append(city).append(district);
-                    String s = aa.toString();
-                    name.setText(s);
-                    EventBus.getDefault().post(new FirstEvent(s));
+                    String address = aMapLocation.getAddress();
+                    name.setText(address);
 
 //可在其中解析amapLocation获取相应内容。
                 } else {
@@ -137,7 +121,6 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
     @Override
     protected void initData() {
         presenter.start();
-
     }
 
     @Override
@@ -167,6 +150,8 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         xrecycler.setAdapter(adapterRecview);
         presenter.start1(adapterRecview);
 
+        EventBus.getDefault().register(this);
+
         mLocationClient = new AMapLocationClient(getActivity());
 //设置定位回调监听
         mLocationClient.setLocationListener(mLocationListener);
@@ -179,8 +164,32 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         mLocationClient.startLocation();
         lishijilu.setVisibility(View.GONE);
         sousuo11();
+        xrecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
 
-
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                int firstVisibleItemPosition = ((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstVisibleItemPosition();
+                Log.e("--------",firstVisibleItemPosition+"");
+            }
+        });
+//        这是刷新加载的方法
+        xrecycler.setLoadingListener(new XRecyclerView.LoadingListener() {
+            //这是刷新
+            @Override
+            public void onRefresh() {
+                xrecycler.refreshComplete();
+            }
+            //这是加载
+            @Override
+            public void onLoadMore() {
+                xrecycler.loadMoreComplete();
+            }
+        });
         setListener();
     }
 

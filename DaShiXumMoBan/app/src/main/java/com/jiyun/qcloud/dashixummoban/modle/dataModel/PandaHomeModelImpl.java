@@ -10,10 +10,8 @@ import static com.jiyun.qcloud.dashixummoban.config.Urls.Shuye;
 /**
  * Created by xingge on 2017/7/26.
  */
-
+//实现之前的网络接口，
 public class PandaHomeModelImpl implements IPandaHomeModel {
-
-
 
     @Override
     public void loadHomeList(NetWorkCallBack<PandaHome> callback) {

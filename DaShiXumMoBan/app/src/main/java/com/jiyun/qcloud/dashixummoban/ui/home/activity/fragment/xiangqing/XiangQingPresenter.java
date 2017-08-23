@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/8/22.
  */
-
+//商品信息二级联动
 public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
     XiangQing.View view;
     IShoYeDataModel getdata;

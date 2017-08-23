@@ -42,6 +42,7 @@ public class ShangPingActivity extends BaseActivity {
         listString.add("商家");
         XiangQingFragment xiangQingFragment = new XiangQingFragment();
         new XiangQingPresenter(xiangQingFragment);
+
         listFragment.add(xiangQingFragment);
         listFragment.add(new PingJiaFragment());
         listFragment.add(new ShangJiaFragment());

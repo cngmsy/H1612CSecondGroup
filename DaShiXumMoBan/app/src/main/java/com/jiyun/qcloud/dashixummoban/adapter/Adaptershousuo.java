@@ -44,7 +44,11 @@ public class Adaptershousuo extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View inflate = LayoutInflater.from(context).inflate(R.layout.item_sousuode, null);
+<<<<<<< HEAD
         TextView viewById =inflate.findViewById(R.id.sousuolishi);
+=======
+        TextView viewById = (TextView) inflate.findViewById(R.id.sousuolishi);
+>>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
         viewById.setText(listsousuo.get(i).getName());
         return inflate;
     }
