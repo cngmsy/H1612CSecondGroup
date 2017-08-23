@@ -25,7 +25,8 @@
         android:id="@+id/tablayout"
         app:tabMode="fixed"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x45"></android.support.design.widget.TabLayout>
+        android:layout_height="@dimen/x45">
+    </android.support.design.widget.TabLayout>
 
     <RelativeLayout
         android:layout_weight="1"

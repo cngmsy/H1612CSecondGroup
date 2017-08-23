@@ -48,9 +48,9 @@ public class DinDanListViewAdapter extends BaseAdapter{
         if (view==null){
             holder=new Holder();
             view = LayoutInflater.from(context).inflate(R.layout.item_listview_dindan, null);
-            holder.img=view.findViewById(R.id.imageView12);
-            holder.tet1=view.findViewById(R.id.textView12);
-            holder.tet2=view.findViewById(R.id.textView17);
+            holder.img= (ImageView) view.findViewById(R.id.imageView12);
+            holder.tet1= (TextView) view.findViewById(R.id.textView12);
+            holder.tet2= (TextView) view.findViewById(R.id.textView17);
             view.setTag(holder);
         }else{
 

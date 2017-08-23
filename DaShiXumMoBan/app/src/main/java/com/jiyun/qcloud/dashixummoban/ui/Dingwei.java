@@ -16,12 +16,12 @@ import com.amap.api.maps.model.MyLocationStyle;
 import com.jiyun.qcloud.dashixummoban.R;
 import com.jiyun.qcloud.dashixummoban.base.BaseActivity;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
+import com.jiyun.qcloud.dashixummoban.entity.SecondEvent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
-import de.greenrobot.event.Subscribe;
 
 /**
  * Created by KING on 2017/8/22 14:38
@@ -40,7 +40,8 @@ public class Dingwei extends BaseActivity {
                     String address = aMapLocation.getAddress();
                     difng.setText(address);
                     EventBus.getDefault().post(new FirstEvent(address));
-//                    EventBus.getDefault().post(new SecondEvent(address));
+                    EventBus.getDefault().post(new SecondEvent(address));
+
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
                     Log.e("AmapError", "location Error, ErrCode:"

@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-<com.jcodecraeer.xrecyclerview.XRecyclerView
-    android:id="@+id/xrecycler"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
     <LinearLayout
         android:id="@+id/jianbian"
         android:background="#90c1ef"
@@ -49,5 +50,6 @@
         android:layout_below="@+id/jianbian"
         android:id="@+id/lishijilu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content">
+    </ListView>
 </RelativeLayout>

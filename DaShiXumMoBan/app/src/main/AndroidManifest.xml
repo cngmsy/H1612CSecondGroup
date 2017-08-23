@@ -20,14 +20,13 @@
         </activity>
 
         <activity android:name=".ui.Dingwei"></activity>
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="58c03a8d2432ddb9985a2553b50c7694">
-        </meta-data>
-        <service android:name="com.amap.api.location.APSService"></service>
 
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="3be11cba08bd773f6c73ab20b338f5cd"></meta-data>
 
         <activity android:name=".ui.home.activity.ShangPingActivity"></activity>
-
-
+        <activity android:name=".activity.ShoppingcarActivity" />
+        <activity android:name=".activity.ClearActivity" />
+        <service android:name="com.amap.api.location.APSService"></service>
     </application>
     <!--允许程序打开网络套接字-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -57,4 +56,5 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <!--用于申请调用A-GPS模块-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+
 </manifest>

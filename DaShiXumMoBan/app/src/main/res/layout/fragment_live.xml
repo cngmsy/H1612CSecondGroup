@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,5 +29,6 @@
         android:id="@+id/listview_dindan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
+>>>>>>> b14f488686ce13650d4631ef3ad8e5476025ff3d
 
 </LinearLayout>

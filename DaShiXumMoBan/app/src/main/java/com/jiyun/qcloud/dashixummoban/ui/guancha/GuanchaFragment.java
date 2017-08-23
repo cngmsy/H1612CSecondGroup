@@ -3,7 +3,6 @@ package com.jiyun.qcloud.dashixummoban.ui.guancha;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +47,7 @@ public class GuanchaFragment extends BaseFragment implements GuanchaContract.Vie
     @Override
     protected void initView(View view) {
         View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.itme_guanchabanner, null);
-        banner = inflate.findViewById(R.id.banner444);
+        banner = (Banner) inflate.findViewById(R.id.banner444);
         listguancha.addHeaderView(inflate);
         adapterGuanacha = new AdapterGuanacha(trailers,getActivity());
         listguancha.setAdapter(adapterGuanacha);
