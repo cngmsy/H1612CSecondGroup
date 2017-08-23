@@ -15,8 +15,10 @@ import com.jiyun.qcloud.dashixummoban.base.BaseFragment;
 import com.jiyun.qcloud.dashixummoban.manager.ActivityCollector;
 import com.jiyun.qcloud.dashixummoban.manager.FragmentMager;
 import com.jiyun.qcloud.dashixummoban.ui.guancha.GuanchaFragment;
+import com.jiyun.qcloud.dashixummoban.ui.guancha.Guanchapresenter;
 import com.jiyun.qcloud.dashixummoban.ui.home.HomePageFragment;
 import com.jiyun.qcloud.dashixummoban.ui.home.HomePresenter;
+import com.jiyun.qcloud.dashixummoban.ui.live.DingDanPresenter;
 import com.jiyun.qcloud.dashixummoban.ui.live.LivePageFragment;
 import com.jiyun.qcloud.dashixummoban.ui.wenghua.WenghuaFragment;
 import com.orhanobut.logger.Logger;
@@ -47,6 +49,7 @@ public class MainActivity extends BaseActivity   {
     RadioGroup homeBottomGroup;
     private FragmentManager fragmentManager;
     private long mExitTime;
+    private GuanchaFragment guanchaFragment;
 
     @Override
     protected void initData() {
@@ -77,13 +80,15 @@ public class MainActivity extends BaseActivity   {
                 FragmentMager.getInstance().start(R.id.container, HomePageFragment.class,false).build();
                 break;
             case R.id.homePandaLive:
-                FragmentMager.getInstance().start(R.id.container, LivePageFragment.class,false).build();
+                LivePageFragment build = (LivePageFragment) FragmentMager.getInstance().start(R.id.container, LivePageFragment.class, false).build();
+                new DingDanPresenter(build);
                 break;
             case R.id.homeRollVideo:
                 FragmentMager.getInstance().start(R.id.container, WenghuaFragment.class,false).build();
                 break;
             case R.id.homePandaBroadcast:
-                FragmentMager.getInstance().start(R.id.container, GuanchaFragment.class,false).build();
+                GuanchaFragment build11 = (GuanchaFragment) FragmentMager.getInstance().start(R.id.container, GuanchaFragment.class, false).build();
+                new Guanchapresenter(build11);
                 break;
 
 

@@ -23,4 +23,5 @@ public class Urls {
     //邮箱注册
     public static final String EMAILREGISTER = "https://reg.cntv.cn/api/register.action";
     public static final String Shuye = SHOUYE+"takeout/home?latitude=116.30142&longitude=40.05087";
+    public static final String Shipinbofang = "https://ticket-api-m.mtime.cn/discovery/trailerList.api";
 }

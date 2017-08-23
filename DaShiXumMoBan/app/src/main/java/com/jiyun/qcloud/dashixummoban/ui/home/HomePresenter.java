@@ -38,7 +38,6 @@ public class HomePresenter implements HomeContract.Presenter {
         homeView.setPresenter(this);
         this.homeModel = new PandaHomeModelImpl();
     }
-
     @Override
     public void start() {
         homeView.showProgress();

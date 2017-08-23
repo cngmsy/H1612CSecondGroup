@@ -2,7 +2,10 @@ package com.jiyun.qcloud.dashixummoban.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,7 +100,10 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
                 if (aMapLocation.getErrorCode() == 0) {
                     String address = aMapLocation.getAddress();
                     name.setText(address);
+<<<<<<< HEAD
 
+=======
+>>>>>>> b14f488686ce13650d4631ef3ad8e5476025ff3d
 //可在其中解析amapLocation获取相应内容。
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
@@ -163,8 +169,34 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         mLocationClient.startLocation();
         lishijilu.setVisibility(View.GONE);
         sousuo11();
+        xrecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
 
-
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                int firstVisibleItemPosition = ((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstVisibleItemPosition();
+                Log.e("--------",firstVisibleItemPosition+"");
+            }
+        });
+//        //这是刷新加载的方法，
+//        xrecycler.setLoadingListener(new XRecyclerView.LoadingListener() {
+//            //这是刷新
+//            @Override
+//            public void onRefresh() {
+//
+//            }
+//            //这是加载
+//            @Override
+//            public void onLoadMore() {
+//
+//            }
+//        });
+//        xrecycler.loadMoreComplete();
+//        xrecycler.refreshComplete();
         setListener();
     }
 

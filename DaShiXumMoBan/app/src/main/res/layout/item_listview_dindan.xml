@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/x50"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/x21"
+        android:layout_marginStart="@dimen/x21"
+        android:layout_marginTop="@dimen/x19"
+        app:srcCompat="@drawable/a" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView12"
+        android:layout_marginLeft="@dimen/x28"
+        android:layout_marginStart="@dimen/x28"
+        android:layout_toEndOf="@+id/imageView12"
+        android:layout_toRightOf="@+id/imageView12"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView12"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:textSize="10sp"
+        android:textColor="#d1d1d1"
+        android:text="2020-10-10 10:10:10" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_marginEnd="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:textSize="13sp"
+        android:text="未支付" />
+    <TextView
+        android:layout_marginTop="@dimen/x30"
+        android:layout_below="@+id/imageView12"
+        android:background="#dfdfdf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:id="@+id/textView15" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="红烧肉等3件商品"
+        android:layout_below="@+id/textView15"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignEnd="@+id/textView14"
+        android:layout_alignRight="@+id/textView14"
+        android:textSize="12sp"
+        android:text="￥31.0" />
+
+
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView17"
+        android:layout_alignRight="@+id/textView17"
+        android:layout_below="@+id/textView17"
+        android:layout_marginTop="@dimen/x18"
+        android:padding="@dimen/x7"
+        android:background="@drawable/button2"
+        android:textColor="#00acff"
+        android:layout_marginBottom="@dimen/x15"
+        android:text="再来一单" />
+</RelativeLayout>

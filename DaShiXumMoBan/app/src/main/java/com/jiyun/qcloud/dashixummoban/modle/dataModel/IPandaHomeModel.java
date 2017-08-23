@@ -10,6 +10,7 @@ import com.jiyun.qcloud.dashixummoban.modle.net.callback.NetWorkCallBack;
  */
 
 public interface IPandaHomeModel extends BaseModel {
+    //网络请求获取其对象的
     void loadHomeList(NetWorkCallBack<PandaHome> callback);
     void loadHomeList1(NetWorkCallBack<Shouye> callBack);
 
