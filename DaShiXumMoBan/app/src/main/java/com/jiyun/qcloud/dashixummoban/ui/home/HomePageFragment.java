@@ -143,7 +143,7 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
     @Override
     protected void initView(View view) {
         View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.item_tianjiatoubuju, null);
-        banner = inflate.findViewById(R.id.banner);
+        banner = (Banner) inflate.findViewById(R.id.banner);
         shouyetu1 = (ImageView) inflate.findViewById(R.id.shouyetu1);
         shouyename1 = (TextView) inflate.findViewById(R.id.shouyename1);
         shouyetu2 = (ImageView) inflate.findViewById(R.id.shouyetu2);

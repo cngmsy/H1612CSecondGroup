@@ -11,20 +11,51 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".main.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".main.MainActivity" />
 
         <activity android:name=".ui.Dingwei"></activity>
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="92d7f351bb12e130c0e08416feac7209">
-        </meta-data>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="92d7f351bb12e130c0e08416feac7209"></meta-data>
 
         <activity android:name=".ui.home.activity.ShangPingActivity"></activity>
+        <activity android:name=".ui.wenghua.dl1.DL1Activity" />
+        <activity android:name=".ui.wenghua.dl2.DL2Activity"></activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5977e86d65b6d61afe0002ec" />
 
     </application>
     <!--允许程序打开网络套接字-->

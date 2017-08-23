@@ -23,4 +23,7 @@ public class Urls {
     //邮箱注册
     public static final String EMAILREGISTER = "https://reg.cntv.cn/api/register.action";
     public static final String Shuye = SHOUYE+"takeout/home?latitude=116.30142&longitude=40.05087";
+
+    public static final String DL2URL = "http://123.206.14.104:8080/TakeoutService/login";
+    public static final String wenghua = "http://123.206.14.104:8080/FileUploadDemo/FileUploadServlet";
 }

@@ -74,7 +74,7 @@ public class MainSectionedAdapter extends SectionedBaseAdapter{
         ImageView viewById = layout.findViewById(R.id.imageItem);
         Glide.with(mContext).load(listdata.get(section).get(position).getIcon()).into(viewById);
 
-        TextView mondy = (TextView) layout.findViewById(R.id.textView8);
+        TextView mondy =  layout.findViewById(R.id.textView8);
         int newPrice = (int) listdata.get(section).get(position).getNewPrice();
         String s = newPrice + "";
         if (s!=null){
@@ -92,8 +92,8 @@ public class MainSectionedAdapter extends SectionedBaseAdapter{
 //            }
 //        });
         final ImageView add = layout.findViewById(R.id.imageView13);
-        final ImageView delete = layout.findViewById(R.id.imageView17);
-        final TextView number = layout.findViewById(R.id.textView25);
+        final ImageView delete =  layout.findViewById(R.id.imageView17);
+        final TextView number =  layout.findViewById(R.id.textView25);
         int oldPrice = listdata.get(section).get(position).getOldPrice();
         if (oldPrice<=0){
             delete.setVisibility(View.INVISIBLE);

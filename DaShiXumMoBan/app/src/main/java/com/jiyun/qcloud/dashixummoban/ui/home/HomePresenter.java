@@ -19,6 +19,7 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,6 +108,22 @@ public class HomePresenter implements HomeContract.Presenter {
         context.startActivity(intent);
 
     }
+
+    @Override
+    public void dl2(String name, String psw) {
+
+    }
+
+    @Override
+    public void dl(String phone, String yzm) {
+
+    }
+
+    @Override
+    public void shangchuang(File file) {
+
+    }
+
     public class GlideImage extends ImageLoader {
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {

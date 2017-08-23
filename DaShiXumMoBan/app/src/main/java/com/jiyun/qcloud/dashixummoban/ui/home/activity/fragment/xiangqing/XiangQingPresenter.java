@@ -12,6 +12,7 @@ import com.jiyun.qcloud.dashixummoban.modle.shoye.IShoYeDataModel;
 import com.jiyun.qcloud.dashixummoban.modle.shoye.ShoYeDataImpl;
 import com.youth.banner.Banner;
 
+import java.io.File;
 import java.util.List;
 
 
@@ -90,6 +91,21 @@ public class XiangQingPresenter implements XiangQing.Presenter,XiangQing.View {
 
     @Override
     public void dingwei(Context context) {
+
+    }
+
+    @Override
+    public void dl2(String name, String psw) {
+
+    }
+
+    @Override
+    public void dl(String phone, String yzm) {
+
+    }
+
+    @Override
+    public void shangchuang(File file) {
 
     }
 
