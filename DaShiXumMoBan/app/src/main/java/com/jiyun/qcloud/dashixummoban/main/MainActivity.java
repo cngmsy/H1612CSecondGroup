@@ -18,6 +18,7 @@ import com.jiyun.qcloud.dashixummoban.ui.guancha.GuanchaFragment;
 import com.jiyun.qcloud.dashixummoban.ui.guancha.Guanchapresenter;
 import com.jiyun.qcloud.dashixummoban.ui.home.HomePageFragment;
 import com.jiyun.qcloud.dashixummoban.ui.home.HomePresenter;
+import com.jiyun.qcloud.dashixummoban.ui.live.DingDanPresenter;
 import com.jiyun.qcloud.dashixummoban.ui.live.LivePageFragment;
 import com.jiyun.qcloud.dashixummoban.ui.wenghua.WenghuaFragment;
 import com.orhanobut.logger.Logger;
@@ -58,7 +59,6 @@ public class MainActivity extends BaseActivity   {
         HomePageFragment homeFragment= (HomePageFragment) FragmentMager.getInstance().start(R.id.container, HomePageFragment.class,false).build();
         //presenter在这里初始化
         new HomePresenter(homeFragment);
-
     }
 
     @Override
@@ -80,14 +80,15 @@ public class MainActivity extends BaseActivity   {
                 FragmentMager.getInstance().start(R.id.container, HomePageFragment.class,false).build();
                 break;
             case R.id.homePandaLive:
-                FragmentMager.getInstance().start(R.id.container, LivePageFragment.class,false).build();
+                LivePageFragment build = (LivePageFragment) FragmentMager.getInstance().start(R.id.container, LivePageFragment.class, false).build();
+                new DingDanPresenter(build);
                 break;
             case R.id.homeRollVideo:
                 FragmentMager.getInstance().start(R.id.container, WenghuaFragment.class,false).build();
                 break;
             case R.id.homePandaBroadcast:
-                GuanchaFragment build = (GuanchaFragment) FragmentMager.getInstance().start(R.id.container, GuanchaFragment.class, false).build();
-                new Guanchapresenter(build);
+                GuanchaFragment build11 = (GuanchaFragment) FragmentMager.getInstance().start(R.id.container, GuanchaFragment.class, false).build();
+                new Guanchapresenter(build11);
                 break;
 
 

@@ -20,8 +20,10 @@
         </activity>
 
         <activity android:name=".ui.Dingwei"></activity>
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="92d7f351bb12e130c0e08416feac7209">
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="58c03a8d2432ddb9985a2553b50c7694">
         </meta-data>
+        <service android:name="com.amap.api.location.APSService"></service>
+
 
         <activity android:name=".ui.home.activity.ShangPingActivity"></activity>
 
