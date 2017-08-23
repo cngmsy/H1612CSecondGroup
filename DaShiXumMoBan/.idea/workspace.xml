@@ -16,7 +16,35 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" readonly="true" id="159ed343-8234-40b4-b578-4b4ffe54d79a" name="Default" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="3dd885fb-7647-40a5-9e95-4648d5e18a47" name="Default" comment="" />
+=======
+    <list default="true" id="87146a8d-67d9-4c15-9b25-11988afad5e1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/activity/ClearActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/activity/ClearActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/AdapterGuanacha.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/AdapterGuanacha.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/AdapterRecview.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/AdapterRecview.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/Adaptershousuo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/Adaptershousuo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/ShoppingCarAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/ShoppingCarAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/dingdan/DinDanListViewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/dingdan/DinDanListViewAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/xiangqing/MainSectionedAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/adapter/xiangqing/MainSectionedAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/modle/net/OkBaseHttpImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/modle/net/OkBaseHttpImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/Dingwei.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/Dingwei.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/guancha/GuanchaFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/guancha/GuanchaFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/home/HomePageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jiyun/qcloud/dashixummoban/ui/home/HomePageFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml" />
+    </list>
+>>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
+>>>>>>> 82d32118d2d75742d0304c49ddb2ebe855827eb5
     <ignored path="DaShiXumMoBan.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -2722,8 +2750,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="false" />
+=======
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <editor active="false" />
+=======
+    <frame x="-9" y="0" width="1932" height="1092" extended-state="0" />
+    <editor active="true" />
+>>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
+>>>>>>> 82d32118d2d75742d0304c49ddb2ebe855827eb5
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
