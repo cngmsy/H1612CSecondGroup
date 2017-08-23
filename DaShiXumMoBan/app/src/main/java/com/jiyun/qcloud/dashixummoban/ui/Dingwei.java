@@ -16,12 +16,12 @@ import com.amap.api.maps.model.MyLocationStyle;
 import com.jiyun.qcloud.dashixummoban.R;
 import com.jiyun.qcloud.dashixummoban.base.BaseActivity;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
+import com.jiyun.qcloud.dashixummoban.entity.SecondEvent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
-import de.greenrobot.event.Subscribe;
 
 /**
  * Created by KING on 2017/8/22 14:38
@@ -37,19 +37,10 @@ public class Dingwei extends BaseActivity {
         public void onLocationChanged(AMapLocation aMapLocation) {
             if (aMapLocation != null) {
                 if (aMapLocation.getErrorCode() == 0) {
-                    double latitude = aMapLocation.getLatitude();//获取纬度
-                    double longitude = aMapLocation.getLongitude();
-                    String country = aMapLocation.getCountry();//国家信息
-                    String province = aMapLocation.getProvince();//省信息
-                    String city = aMapLocation.getCity();//城市信息
-                    String district = aMapLocation.getDistrict();
-                    StringBuffer aa = new StringBuffer();
-                    aa.append(latitude + "").append(longitude + "").append(country).append(province)
-                            .append(city).append(district);
-                    String s = aa.toString();
-                    difng.setText(s);
-                    EventBus.getDefault().post(new FirstEvent(s));
-
+                    String address = aMapLocation.getAddress();
+                    difng.setText(address);
+                    EventBus.getDefault().post(new FirstEvent(address));
+                    EventBus.getDefault().post(new SecondEvent(address));
 //可在其中解析amapLocation获取相应内容。
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。

@@ -10,8 +10,8 @@
     <ImageView
         android:src="@mipmap/ic_launcher"
         android:id="@+id/image_shoppingcar_head"
-        android:layout_width="@dimen/x65"
-        android:layout_height="@dimen/y30"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x60"
         android:scaleType="fitXY"/>
 
     <LinearLayout
@@ -30,18 +30,18 @@
                 android:text="---"
                 android:id="@+id/tv_shoppingcar_form"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/y10" />
+                android:layout_height="@dimen/y20" />
             <TextView
                 android:text="---"
                 android:textColor="#eb3434"
                 android:id="@+id/tv_shoppingcar_newprice"
-                android:layout_marginTop="@dimen/y20"
+                android:layout_marginTop="@dimen/y15"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y10" />
         </LinearLayout>
 
         <TextView
-            android:paddingTop="@dimen/y15"
+            android:paddingTop="@dimen/y20"
             android:text="---"
             android:textColor="#eb3434"
             android:id="@+id/tv_shoppingcar_num"

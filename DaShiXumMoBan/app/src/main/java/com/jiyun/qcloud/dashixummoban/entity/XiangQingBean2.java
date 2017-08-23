@@ -55,7 +55,7 @@ public class XiangQingBean2 implements  Serializable{
         this.list = list;
     }
 
-    public static class ListBean {
+    public static class ListBean implements Serializable{
         /**
          * bargainPrice : true
          * form : 肉末烧汁茄子+千叶豆腐+小食+时蔬+含粗粮米饭)

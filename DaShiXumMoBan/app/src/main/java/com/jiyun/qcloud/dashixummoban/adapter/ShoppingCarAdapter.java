@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.jiyun.qcloud.dashixummoban.R;
+import com.jiyun.qcloud.dashixummoban.entity.XiangQingBean2;
+
+import java.util.ArrayList;
 
 /**
  * Created by ASUS on 2017/8/22.
@@ -17,10 +21,16 @@ import com.jiyun.qcloud.dashixummoban.R;
 public class ShoppingCarAdapter extends RecyclerView.Adapter{
 
     private Context context;
+    private ArrayList<XiangQingBean2.ListBean> arrlist;
+
+    public ShoppingCarAdapter(Context context, ArrayList<XiangQingBean2.ListBean> arrlist) {
+        this.context = context;
+        this.arrlist = arrlist;
+    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_shoppingcar, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_shoppingcar, parent,false);
         MyHolder myHolder = new MyHolder(view);
         return myHolder;
     }
@@ -28,11 +38,15 @@ public class ShoppingCarAdapter extends RecyclerView.Adapter{
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MyHolder holder1 = (MyHolder) holder;
+        holder1.tv_shoppingcar_form.setText(arrlist.get(position).getName());
+        holder1.tv_shoppingcar_newprice.setText("￥："+(int)arrlist.get(position).getNewPrice()+"");
+        holder1.tv_shoppingcar_num.setText(arrlist.get(position).getOldPrice()+"");
+        Glide.with(context).load(arrlist.get(position).getIcon()).into(holder1.image_shoppingcar_head);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrlist.size();
     }
 
     class MyHolder extends RecyclerView.ViewHolder{
