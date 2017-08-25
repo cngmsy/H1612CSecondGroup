@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jiecaovideoplayer-2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/289896cf665280a6259f545dacc0f55683eecd09/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/289896cf665280a6259f545dacc0f55683eecd09/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/fm.jiecao/jiecaovideoplayer/2.0/a297e180c76c43ef3480e59bfe07f20632c6f73e/jiecaovideoplayer-2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
