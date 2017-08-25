@@ -4,7 +4,6 @@ import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.jiyun.qcloud.dashixummoban.R;
 import com.jiyun.qcloud.dashixummoban.adapter.AdapterGuanacha;
 import com.jiyun.qcloud.dashixummoban.entity.Shipin;
 import com.jiyun.qcloud.dashixummoban.modle.GuanchaModel.IpandaGuanchaModel;

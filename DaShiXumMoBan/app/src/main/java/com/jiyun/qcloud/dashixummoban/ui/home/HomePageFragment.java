@@ -87,7 +87,6 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
     private AdapterRecview adapterRecview;
     private Banner banner;
 
-
     public AMapLocationClient mLocationClient = null;
     public AMapLocationClientOption mLocationOption = null;
     //声明定位回调监听器
