@@ -9,10 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.jiyun.qcloud.dashixummoban.R;
 import com.jiyun.qcloud.dashixummoban.adapter.dingdan.DinDanListViewAdapter;
 import com.jiyun.qcloud.dashixummoban.base.BaseFragment;

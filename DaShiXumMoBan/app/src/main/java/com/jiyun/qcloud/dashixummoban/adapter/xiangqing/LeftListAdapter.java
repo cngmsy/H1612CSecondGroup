@@ -55,7 +55,7 @@ public class LeftListAdapter extends BaseAdapter {
         if (arg1 == null) {
             holder = new Holder();
             arg1 = LayoutInflater.from(context).inflate(R.layout.left_list_item, null);
-            holder.left_list_item = (TextView) arg1.findViewById(R.id.left_list_item);
+            holder.left_list_item =  arg1.findViewById(R.id.left_list_item);
             arg1.setTag(holder);
         } else {
             holder = (Holder) arg1.getTag();

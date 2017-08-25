@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.jiyun.qcloud.dashixummoban.R;
 import com.jiyun.qcloud.dashixummoban.entity.Shipin;
 
@@ -53,7 +52,7 @@ public class AdapterGuanacha extends BaseAdapter {
         if(view==null){
             youhua=new Youhua();
             view = LayoutInflater.from(getActivity()).inflate(R.layout.item_guancha, null);
-            youhua.jiecao = view.findViewById(R.id.videocontroller1);
+            youhua.jiecao = (JCVideoPlayer) view.findViewById(R.id.videocontroller1);
             view.setTag(youhua);
         }else{
             youhua= (Youhua) view.getTag();

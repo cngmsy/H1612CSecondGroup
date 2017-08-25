@@ -2,10 +2,8 @@ package com.jiyun.qcloud.dashixummoban.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -33,11 +30,8 @@ import com.jiyun.qcloud.dashixummoban.entity.DanliGreen;
 import com.jiyun.qcloud.dashixummoban.entity.FirstEvent;
 import com.jiyun.qcloud.dashixummoban.entity.PandaHome;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
-
 import com.jiyun.qcloud.dashixummoban.entity.Sousuolei;
-
 import com.jiyun.qcloud.dashixummoban.ui.home.activity.ShangPingActivity;
-
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
@@ -49,9 +43,6 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
-import retrofit2.http.HEAD;
-
-import static com.jiyun.qcloud.dashixummoban.manager.ActivityCollector.getActivity;
 
 
 /**
@@ -107,6 +98,7 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
                 if (aMapLocation.getErrorCode() == 0) {
                     String address = aMapLocation.getAddress();
                     name.setText(address);
+
 //可在其中解析amapLocation获取相应内容。
                 } else {
                     //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
@@ -129,13 +121,12 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
     @Override
     protected void initData() {
         presenter.start();
-
     }
 
     @Override
     protected void initView(View view) {
         View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.item_tianjiatoubuju, null);
-        banner = inflate.findViewById(R.id.banner);
+        banner = (Banner) inflate.findViewById(R.id.banner);
         shouyetu1 = (ImageView) inflate.findViewById(R.id.shouyetu1);
         shouyename1 = (TextView) inflate.findViewById(R.id.shouyename1);
         shouyetu2 = (ImageView) inflate.findViewById(R.id.shouyetu2);
@@ -158,6 +149,8 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
         xrecycler.addHeaderView(inflate);
         xrecycler.setAdapter(adapterRecview);
         presenter.start1(adapterRecview);
+
+        EventBus.getDefault().register(this);
 
         mLocationClient = new AMapLocationClient(getActivity());
 //设置定位回调监听
@@ -184,21 +177,19 @@ public class HomePageFragment extends BaseFragment implements XRecyclerView.Load
                 Log.e("--------",firstVisibleItemPosition+"");
             }
         });
-//        //这是刷新加载的方法，
-//        xrecycler.setLoadingListener(new XRecyclerView.LoadingListener() {
-//            //这是刷新
-//            @Override
-//            public void onRefresh() {
-//
-//            }
-//            //这是加载
-//            @Override
-//            public void onLoadMore() {
-//
-//            }
-//        });
-//        xrecycler.loadMoreComplete();
-//        xrecycler.refreshComplete();
+//        这是刷新加载的方法
+        xrecycler.setLoadingListener(new XRecyclerView.LoadingListener() {
+            //这是刷新
+            @Override
+            public void onRefresh() {
+                xrecycler.refreshComplete();
+            }
+            //这是加载
+            @Override
+            public void onLoadMore() {
+                xrecycler.loadMoreComplete();
+            }
+        });
         setListener();
     }
 

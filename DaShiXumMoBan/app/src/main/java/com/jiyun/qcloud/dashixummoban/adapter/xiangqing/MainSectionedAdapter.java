@@ -71,10 +71,10 @@ public class MainSectionedAdapter extends SectionedBaseAdapter{
         }
         ((TextView) layout.findViewById(R.id.textItem)).setText(listdata.get(section).get(position).getName());
         ((TextView) layout.findViewById(R.id.textView6)).setText(listdata.get(section).get(position).getName());
-        ImageView viewById = layout.findViewById(R.id.imageItem);
+        ImageView viewById = (ImageView) layout.findViewById(R.id.imageItem);
         Glide.with(mContext).load(listdata.get(section).get(position).getIcon()).into(viewById);
 
-        TextView mondy = (TextView) layout.findViewById(R.id.textView8);
+        TextView mondy =  layout.findViewById(R.id.textView8);
         int newPrice = (int) listdata.get(section).get(position).getNewPrice();
         String s = newPrice + "";
         if (s!=null){
@@ -91,9 +91,14 @@ public class MainSectionedAdapter extends SectionedBaseAdapter{
 //                mButtonClick.buttonClick(position, integer2, orderView);
 //            }
 //        });
-        final ImageView add = layout.findViewById(R.id.imageView13);
-        final ImageView delete = layout.findViewById(R.id.imageView17);
-        final TextView number = layout.findViewById(R.id.textView25);
+
+//        final ImageView add = layout.findViewById(R.id.imageView13);
+//        final ImageView delete =  layout.findViewById(R.id.imageView17);
+//        final TextView number =  layout.findViewById(R.id.textView25);
+        final ImageView add = (ImageView) layout.findViewById(R.id.imageView13);
+        final ImageView delete = (ImageView) layout.findViewById(R.id.imageView17);
+        final TextView number = (TextView) layout.findViewById(R.id.textView25);
+
         int oldPrice = listdata.get(section).get(position).getOldPrice();
         if (oldPrice<=0){
             delete.setVisibility(View.INVISIBLE);
