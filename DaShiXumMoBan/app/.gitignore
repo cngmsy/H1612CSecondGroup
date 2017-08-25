@@ -67,6 +67,7 @@ local.properties
 .loadpath
 .recommenders
 
+
 # Eclipse Core
 .project
 
@@ -117,6 +118,8 @@ buildNumber.properties
 .mvn/timing.properties
 
 .idea/libraries/
+.idea
+.build
 MVP.iml
 app/app.iml
 core/core.iml

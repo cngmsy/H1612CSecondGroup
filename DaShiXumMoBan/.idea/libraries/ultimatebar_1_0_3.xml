@@ -1,8 +1,13 @@
 <component name="libraryTable">
   <library name="ultimatebar-1.0.3">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/org.zackratos/ultimatebar/1.0.3/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/org.zackratos/ultimatebar/1.0.3/res" />
+=======
+      <root url="file://$USER_HOME$/.android/build-cache/35a7e4a6720c5bdd992de95289a63ac8248cd89c/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/35a7e4a6720c5bdd992de95289a63ac8248cd89c/output/jars/classes.jar!/" />
+>>>>>>> 4b64a553056bc1d53d647f9ed1205a2c8c2adea9
     </CLASSES>
     <JAVADOC />
     <SOURCES>
