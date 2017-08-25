@@ -231,7 +231,7 @@ public class OkBaseHttpImpl implements IBaseHttp {
                 App.mBaseActivity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        callBacks.onSuccess(result);
+                        callBacks.onSuccess(getGeneric(result,callBacks));
                     }
                 });
             }

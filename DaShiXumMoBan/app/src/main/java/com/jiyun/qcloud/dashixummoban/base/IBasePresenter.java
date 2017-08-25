@@ -6,6 +6,7 @@ import com.jiyun.qcloud.dashixummoban.adapter.AdapterRecview;
 import com.jiyun.qcloud.dashixummoban.entity.Shouye2;
 import com.youth.banner.Banner;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -17,4 +18,7 @@ public interface IBasePresenter {
     void start1(AdapterRecview adapterRecview);
     void setBanner(Banner banner,List<Shouye2.HeadBean.PromotionListBean> promotionList);
     void dingwei(Context context);
+    void dl2(String name, String psw);
+    void dl(String phone, String yzm);
+    void shangchuang(File file);
 }

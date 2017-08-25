@@ -19,6 +19,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import butterknife.Unbinder;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
@@ -26,6 +27,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
  * A simple {@link Fragment} subclass.
  */
 public class GuanchaFragment extends BaseFragment implements GuanchaContract.View {
+
     @BindView(R.id.listguancha)
     ListView listguancha;
     Unbinder unbinder;

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jiyun.qcloud.dashixummoban.ui.wenghua.dl1.DL1Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:background="@color/colorBlue">
+
+        <ImageView
+            android:id="@+id/dl_finish"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x43"
+            android:src="@drawable/go_back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y15"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x100"
+            android:text="登陆"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/dl_mimadl"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/x35"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="密码登陆"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/x30" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x70"
+        android:layout_margin="@dimen/x10">
+
+        <EditText
+            android:id="@+id/dl_et1"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x40"
+            android:hint="输入手机号" />
+
+        <Button
+            android:id="@+id/dl_bt"
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x50"
+            android:layout_gravity="center"
+            android:background="@color/colorBlue"
+            android:text="获取验证码"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/x25" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="@dimen/x8"
+        android:id="@+id/dl_et2"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x60"
+        android:layout_marginLeft="@dimen/x43"
+        android:hint="输入验证码" />
+
+    <Button
+        android:id="@+id/dl_dl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_margin="@dimen/x43"
+        android:background="@color/colorgreen"
+        android:text="登陆"
+        android:textSize="@dimen/x30" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:gravity="center"
+        android:text="-----------第三方登录----------"
+        android:textSize="@dimen/x30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x150">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x150"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_gravity="center"
+                android:src="@drawable/umeng_socialize_wechat" />
+
+            <TextView
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y35"
+                android:layout_gravity="center"
+                android:text="微信"
+                android:textSize="@dimen/x30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dl_lin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x150"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_gravity="center"
+                android:src="@drawable/umeng_socialize_qq" />
+
+            <TextView
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/y35"
+                android:layout_gravity="center"
+                android:text="qq"
+                android:textSize="@dimen/x30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x150"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_gravity="center"
+                android:src="@drawable/umeng_socialize_sina" />
+
+            <TextView
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y35"
+                android:layout_gravity="center"
+                android:text="微博"
+                android:textSize="@dimen/x30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x150"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_gravity="center"
+                android:src="@drawable/umeng_socialize_qzone" />
+
+            <TextView
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y35"
+                android:layout_gravity="center"
+                android:text="淘宝"
+                android:textSize="@dimen/x30" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -94,7 +94,11 @@ public class AdapterRecview extends RecyclerView.Adapter {
             public Neibulei(View itemView) {
                 super(itemView);
                 itemView1 = itemView;
+
+//                name =  itemView.findViewById(R.id.name1);
+
                 name = (TextView) itemView.findViewById(R.id.name1);
+
             }
         }
         private class Neibulei1 extends RecyclerView.ViewHolder {
@@ -108,12 +112,21 @@ public class AdapterRecview extends RecyclerView.Adapter {
 
             public Neibulei1(View itemView) {
                 super(itemView);
+//<<<<<<< HEAD
+//                zhao1 = itemView.findViewById(R.id.zhao1);
+//                zhao2 = itemView.findViewById(R.id.zhao2);
+//                zhao3 =  itemView.findViewById(R.id.zhao3);
+//                zhao4 = itemView.findViewById(R.id.zhao4);
+//                zhao5 =  itemView.findViewById(R.id.zhao5);
+//                zhao6 =  itemView.findViewById(R.id.zhao6);
+//=======
                 zhao1 = (TextView) itemView.findViewById(R.id.zhao1);
                 zhao2 = (TextView) itemView.findViewById(R.id.zhao2);
                 zhao3 = (TextView) itemView.findViewById(R.id.zhao3);
                 zhao4 = (TextView) itemView.findViewById(R.id.zhao4);
                 zhao5 = (TextView) itemView.findViewById(R.id.zhao5);
                 zhao6 = (TextView) itemView.findViewById(R.id.zhao6);
+//>>>>>>> e97dfb4803f95b0a152b3bbe8cbe42db9bdee69d
             }
         }
         public interface Tiaozhuan{
